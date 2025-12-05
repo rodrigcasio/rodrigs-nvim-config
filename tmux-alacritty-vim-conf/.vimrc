@@ -9,7 +9,7 @@ set mouse=a
 set nowrap
 set visualbell
 
-colorscheme sorbet
+colorscheme sorbet  " fav: darkblue, blue, murphy, slate, sorbet, elflord
 set termguicolors 
 hi Normal guibg=NONE ctermbg=NONE
 hi Nontext guibg=NONE ctermbg=NONE

@@ -12,10 +12,6 @@ set mouse=a
 set nowrap
 set visualbell
 
-colorscheme murphy " fav: darkblue, blue, murphy, slate, sorbet, elflord
-set termguicolors 
-hi Normal guibg=NONE ctermbg=NONE
-hi Nontext guibg=NONE ctermbg=NONE
 
 " --- Indentation ---
 set expandtab
@@ -33,3 +29,25 @@ set clipboard=unnamed,unnamedplus
 
 " --- Terminal ---
 set t_Co=256
+
+" --- Vim-Plug Setup ---
+call plug#begin('~/.vim/plugged')
+
+Plug 'jiangmiao/auto-pairs' 
+
+" Colorschemes
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+
+"---
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+
+" defualt VIM fav: darkblue, blue, murphy, slate, sorbet, elflord
+" plugged fav: gruvbox, onedark
+colorscheme onedark
+set termguicolors 
+hi Normal guibg=NONE ctermbg=NONE
+hi Nontext guibg=NONE ctermbg=NONE

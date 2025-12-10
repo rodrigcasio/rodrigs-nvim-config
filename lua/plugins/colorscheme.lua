@@ -4,6 +4,7 @@ return {
   -- Targeting the 'tokyonight.nvim' plugin used by lazyvim
   {
     "folke/tokyonight.nvim",
+    "slate.nvim",
     opts = {
 
       -- This makes the main editor area transparent

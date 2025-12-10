@@ -3,4 +3,8 @@
 -- Add any additional options here
 
 -- make cmdline like VIM at the bottom of the screen
-vim.opt.cmdheight = 2
+return {
+  opt = {
+    cmdheight = 2,
+  },
+}

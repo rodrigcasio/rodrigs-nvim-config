@@ -23,7 +23,7 @@ return {
     config = function()
       -- setting colorscheme
       vim.cmd.colorscheme("default")
-      
+
       vim.api.nvim_set_option("background", "dark") -- Set to dark for best contrast with the 'quiet' theme
       vim.api.nvim_set_option("termguicolors", true) -- Required for modern color support
       vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

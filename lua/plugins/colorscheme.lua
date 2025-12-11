@@ -1,10 +1,12 @@
- -- ~/.config/nvim/lua/plugins/colorscheme.lua
+-- ~/.config/nvim/lua/plugins/colorscheme.lua
 
 return {
-  -- Targeting the 'tokyonight.nvim' plugin used by lazyvim
   {
     "folke/tokyonight.nvim",
     opts = {
+      -- styles (storm, day, night, moon)
+      style = "storm",
+
       -- This makes the main editor area transparent
       transparent = true,
       styles = {
@@ -13,4 +15,4 @@ return {
       },
     },
   },
-} 
+}

@@ -15,10 +15,10 @@ return {
       },
     },
   },
-  
+
   -- CURRENTLY IN USE: 
   {
-    "LazyVim/LazyVim", 
+    "LazyVim/LazyVim",
     priority = 1000, -- Ensures it runs last
     config = function()
       -- setting colorscheme

@@ -5,7 +5,8 @@ return {
   -- Languages
   { import = "lazyvim.plugins.extras.lang.python" },
   { import = "lazyvim.plugins.extras.lang.json" },
-
+  -- NEW: JavaScript/TypeScript support
+  { import = "lazyvim.plugins.extras.lang.typescript" },
   -- Editor/UI
   { import = "lazyvim.plugins.extras.editor.navic" },
 }

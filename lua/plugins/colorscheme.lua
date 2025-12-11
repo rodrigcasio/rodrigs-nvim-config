@@ -3,11 +3,10 @@
 return {
   {
     "folke/tokyonight.nvim",
+    priority = 1000,
     opts = {
       -- styles (storm, day, night, moon)
       style = "storm",
-
-      -- This makes the main editor area transparent
       transparent = true,
       styles = {
         sidebards = "transparent", -- transparent sidebards (nvim-tree)

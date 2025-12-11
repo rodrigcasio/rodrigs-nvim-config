@@ -3,8 +3,3 @@
 -- Add any additional options here
 
 -- make cmdline like VIM at the bottom of the screen
-return {
-  opt = {
-    cmdheight = 2,
-  },
-}

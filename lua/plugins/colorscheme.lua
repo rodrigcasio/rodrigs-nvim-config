@@ -1,14 +1,12 @@
 -- ~/.config/nvim/lua/plugins/colorscheme.lua
-
--- colorscheme (fav: default (best),  sobert, darkblue, murphy, slate, elflord, default)
+-- if wanting to use tokyonight colorscheme, uncomment  tokyonight settings
 return {
+
   {
     "folke/tokyonight.nvim",
-    -- when wanting to use tokyo, delete this
-    -- enable = false,
     priority = 1000,
     opts = {
-      style = "storm",
+      style = "storm", -- day moon, night, storm(best)
       transparent = true,
       styles = {
         sidebards = "transparent",
@@ -17,14 +15,15 @@ return {
     },
   },
 
-  -- -- CURRENTLY IN USE:
+  -- If want to use default nvim colorscheme:
   -- {
   --   "LazyVim/LazyVim",
   --   -- ensures it runs last
   --   -- priority = 1000,
   --   config = function()
   --     -- setting colorscheme
-  --     vim.cmd.colorscheme("default")
+  --     -- colorscheme (fav: default(best), blue, darkblue, habamax, murphy, slate, elflord, default)
+  --     vim.cmd.colorscheme("darkblue")
   --
   --     vim.api.nvim_set_option("background", "dark") -- Set to dark for best contrast with the 'quiet' theme
   --     vim.api.nvim_set_option("termguicolors", true) -- Required for modern color support

@@ -1,11 +1,9 @@
-# ====================================================================
 # MINIMAL ALACRITTY CONFIGURATION
-# ====================================================================
 
 # 1. WINDOW CONFIGURATION
 [window]
 # Set the background opacity (0.8 = 80% opaque, 20% transparent).
-opacity = 0.55
+opacity = 0.95
 
 # set defualt window dimensions in columns (width) and lines (height).
 # making the app window of alacritty bigger when opened
@@ -24,8 +22,10 @@ y = 5
 size = 12.0
 
 [font.normal]
-# Use a common, reliable monospaced font for a clean look.
-family = "Monospace"
+
+family = "JetBrainsMono Nerd Font Mono"
+# JetBrainsMono Nerd Font Mono
+# Monospace
 
 # 3. COLORS
 [colors.primary]

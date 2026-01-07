@@ -1,6 +1,4 @@
-# MINIMAL ALACRITTY CONFIGURATION
-
-# 1. WINDOW CONFIGURATION
+# WINDOW CONFIGURATION
 [window]
 # Set the background opacity (0.8 = 80% opaque, 20% transparent).
 opacity = 0.95
@@ -11,13 +9,11 @@ opacity = 0.95
 columns = 150
 lines = 35
 
-# Add some empty space around the terminal content for better aesthetics.
-# The value is specified in pixels.
 [window.padding]
 x = 5
 y = 5
 
-# 2. FONT SETTINGS
+# FONT SETTINGS
 [font]
 size = 12.0
 
@@ -27,7 +23,7 @@ family = "JetBrainsMono Nerd Font Mono"
 # JetBrainsMono Nerd Font Mono
 # Monospace
 
-# 3. COLORS
+# COLORS
 [colors.primary]
 # Foreground (text) color for the default dark theme.
 foreground = "0xd8d8d8"
@@ -37,7 +33,7 @@ background = "0x1d1f21"
 [colors.cursor]
 cursor = "#ff7600"
 
-# 4. CURSOR APPEARANCE
+# CURSOR APPEARANCE
 [cursor]
 blink_interval = 500
 
@@ -46,17 +42,17 @@ blink_interval = 500
 shape = "Block"
 blinking = "On"
 
-# 5. SCROLLBACK
+# SCROLLBACK
 [scrolling]
 # Maximum number of lines in the scrollback buffer.
 history = 100000
 
-# 6. ENVIRONMENT
+# ENVIRONMENT
 [env]
 # Setting TERM is correct for best compatibility with Tmux and other tools.
 TERM = "alacritty"
 
-# 7. KEYBOARD BINDINGS
+# KEYBOARD BINDINGS
 [keyboard]
 bindings = [
   # Spawn a new Alacritty window in the current working directory.

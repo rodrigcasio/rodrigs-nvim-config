@@ -1,3 +1,5 @@
+# Important commands for LINUX ARCH checkups
+
 ## Storage && Disks
 
 `df -h`: Check free/used disk space on all mounted partitions.
@@ -6,23 +8,23 @@
 `ncdu`: (Installable) An interactive disk usage analyzer (great for finding big files).
 
 ## CPU & Memory
-
-free -h: Check RAM and swap usage.
-uptime: See how long the system has been up and the CPU load average.
-lscpu: Detailed information about your processor's architecture and cores.
-htop or btop: (Installable) Interactive real-time monitors for CPU, RAM, and processes.
+ 
+`free -h`: Check RAM and swap usage.
+`uptime`: See how long the system has been up and the CPU load average.
+`lscpu`: Detailed information about your processor's architecture and cores.
+`htop `or `btop`: (Installable) Interactive real-time monitors for CPU, RAM, and processes.
 
 ## System Health & logs 
 
-uname -r: Check your current kernel version.
-journalctl -p 3 -xb: Show only errors from the current boot.
-systemctl --failed: List any services that failed to start.
-sensors: (Requires lm_sensors) Check hardware temperatures and fan speeds
+`uname `-r: Check your current kernel version.
+`journalctl `-p 3 -xb: Show only errors from the current boot.
+`systemctl --failed`: List any services that failed to start.
+`sensors`: (Requires lm_sensors) Check hardware temperatures and fan speeds
 
 ## Network & Updates
 
-ip a: View your IP addresses and network interface status.
-checkupdates: (Part of pacman-contrib) See how many packages are ready for an update without syncing.
+`ip a`: View your IP addresses and network interface status.
+`checkupdates`: (Part of pacman-contrib) See how many packages are ready for an update without syncing.
 
 # Sysstat Commands for Arch Linux
 

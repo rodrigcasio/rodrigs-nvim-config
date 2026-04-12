@@ -1,0 +1,44 @@
+# ~/.zshrc
+
+# ------------------------------
+# 1. ENVIRONMENT VARIABLES (PATH & LOCALE)
+# ------------------------------
+# Homebrew path (put this first so Homebrew tools take priority)
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Added your MATLAB path from the Arch config
+export PATH="$PATH:/usr/local/MATLAB/R2025b/bin"
+
+# Language support
+export LC_ALL=en_US.UTF-8
+
+# ------------------------------
+# 2. ALIASES
+# ------------------------------
+# macOS 'ls' uses -G for color. Grep uses --color.
+alias ls='ls -G'
+alias grep='grep --color=auto'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias g++17='g++ -std=c++17'
+
+# ------------------------------
+# 3. PROMPT CONFIGURATION (Blue Style)
+# ------------------------------
+# %n=user, %m=host, %1~=current folder, %#=prompt symbol
+PROMPT='%F{blue}%n%f@%m [%F{blue}%1~%f]%# '
+
+# ------------------------------
+# 4. COMPLETION & PLUGINS
+# ------------------------------
+# Native Zsh autocompletion
+# This replaces the bash_completion logic from your Arch file
+视觉autoload -Uz compinit
+compinit
+
+# Load NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+

@@ -34,8 +34,6 @@ PROMPT='%F{blue}%n%f@%m [%F{blue}%1~%f]%# '
 # ------------------------------
 # Native Zsh autocompletion
 # This replaces the bash_completion logic from your Arch file
-视觉autoload -Uz compinit
-compinit
 
 # Load NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"

@@ -290,3 +290,6 @@ zle -N down-line-or-beginning-search
 
 bindkey '^P' up-line-or-beginning-search
 bindkey '^N' down-line-or-beginning-search
+
+# Set keyboard to US Alt-Gr Intl for Spanish accents
+setxkbmap -layout us -variant altgr-intl

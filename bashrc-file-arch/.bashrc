@@ -1,14 +1,8 @@
-#
 # ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# ------------------------------
 # 1. ALIASES
-# ------------------------------
-
 # Enable color output by default for ls and grep
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -16,24 +10,18 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# ------------------------------
-# 2. PROMPT (PS1) CONFIGURATION
-# ------------------------------
+# 2. GIT BRANCH
+git_prompt() {
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  printf " (%s)" "$branch"
+}
 
-# Define color codes. They MUST be wrapped in \[...\] to tell Bash they are
-# non-printing, which prevents the prompt corruption issue.
-COLOR_BLUE='\[\e[0;34m\]'
-COLOR_NONE='\[\e[0m\]'
+# 3. PROMPT (PS1) CONFIGURATION
+#    rodrig:nvim (main)$
+PS1="\u:\W\$(git_prompt)\$ "
 
-# Construct the PS1 prompt: [Blue]user[/Blue]@host ~]$
-PS1="${COLOR_BLUE}\u${COLOR_NONE}@\h [${COLOR_BLUE}\W${COLOR_NONE}]\$ "
-
-# ------------------------------
-# 3. COMPLETION FEATURES
-# ------------------------------
-
-# Enable programmable completion features. This loads smarter, command-specific
-# autocompletion for tools like git, pacman, etc.
+# 4. COMPLETION FEATURES
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -42,5 +30,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# 5. PATH CUSTOMIZATIONS
 export PATH="$PATH:/usr/local/MATLAB/R2025b/bin"
-

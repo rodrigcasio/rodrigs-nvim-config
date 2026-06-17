@@ -25,3 +25,9 @@ vim.g.clipboard = {
   },
   cache_enabled = 0,
 }
+-- Force cursor shaping OFF after plugins try to override it
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.opt.guicursor = ""
+  end,
+})

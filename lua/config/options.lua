@@ -37,3 +37,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
     vim.opt.guicursor = ""
   end,
 })
+
+-- Force a screen redraw when leaving insert mode to clear tmux visual ghosting
+vim.api.nvim_create_autocmd("InsertLeave", {
+	pattern = "*",
+	command = "redraw!",
+})

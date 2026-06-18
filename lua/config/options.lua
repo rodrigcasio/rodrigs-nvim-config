@@ -5,12 +5,9 @@ vim.g.lazyvim_check_order = false
 
 local opt = vim.opt
 
--- 1. Your original clipboard choice + new options
+-- 1. Base Configuration Options
 opt.clipboard = "unnamedplus"
 opt.relativenumber = true
-
--- 2. Fix ghost characters by stopping tmux cursor shaping modifications
-opt.guicursor = ""
 
 -- Smart Clipboard: Detects if running on native Linux or Windows/WSL
 if vim.fn.has("wsl") == 1 then
@@ -31,15 +28,6 @@ else
   opt.clipboard = "unnamedplus"
 end
 
--- Force cursor shaping OFF after plugins try to override it
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    vim.opt.guicursor = ""
-  end,
-})
-
--- Force a screen redraw when leaving insert mode to clear tmux visual ghosting
-vim.api.nvim_create_autocmd("InsertLeave", {
-	pattern = "*",
-	command = "redraw!",
-})
+-- 2. Utility Keymaps
+-- Pressing Esc twice in Normal Mode instantly clears search highlights
+vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight" })

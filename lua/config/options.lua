@@ -12,19 +12,25 @@ opt.relativenumber = true
 -- 2. Fix ghost characters by stopping tmux cursor shaping modifications
 opt.guicursor = ""
 
--- 3. Seamless Windows Clipboard Sync
-vim.g.clipboard = {
-  name = "WslClipboard",
-  copy = {
-    ["+"] = "clip.exe",
-    ["*"] = "clip.exe",
-  },
-  paste = {
-    ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
-    ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
-  },
-  cache_enabled = 0,
-}
+-- Smart Clipboard: Detects if running on native Linux or Windows/WSL
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
+      ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
+    },
+    cache_enabled = 0,
+  }
+else
+  -- Native Linux (Arch) Clipboard Settings
+  opt.clipboard = "unnamedplus"
+end
+
 -- Force cursor shaping OFF after plugins try to override it
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()

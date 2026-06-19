@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -9,8 +10,8 @@ Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 syntax on
-set number
-set relativenumber
+" set number
+" set relativenumber
 set mouse=a
 set termguicolors
 
@@ -23,7 +24,7 @@ set smartindent
 set splitbelow
 set splitright
 
-colorscheme onedark
+colorscheme darkblue
 
 let mapleader = " "
 

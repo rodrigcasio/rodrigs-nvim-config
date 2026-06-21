@@ -28,3 +28,7 @@ end
 
 -- 2. Utility Keymaps
 vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlight" })
+
+-- Force Window Splits to work everywhere (Fixes missing shortcuts)
+vim.keymap.set("n", "<leader>-", "<cmd>split<cr>", { desc = "Split Window Horizontally" })
+vim.keymap.set("n", "<leader>|", "<cmd>vsplit<cr>", { desc = "Split Window Vertically" })

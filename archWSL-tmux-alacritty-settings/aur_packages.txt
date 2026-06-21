@@ -22,7 +22,4 @@ sudo 1.9.17.p2-6
 tmux 3.6_b-2
 unzip 6.0-23
 vim 9.2.0670-1
-win32yank-bin 0.1.1-1
 xclip 0.13-6
-yay 13.0.1-1
-yay-debug 13.0.1-1

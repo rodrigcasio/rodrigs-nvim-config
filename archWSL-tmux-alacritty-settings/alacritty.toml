@@ -5,7 +5,7 @@ args = ["-d", "Arch", "--cd", "~"]
 
 # WINDOW CONFIGURATION
 [window]
-opacity = 0.99
+opacity = 1
 
 [window.dimensions]
 columns = 150
@@ -20,7 +20,7 @@ y = 5
 size = 12.0
 
 [font.normal]
-family = "Consolas" 
+family = "FiraCode Nerd Font Mono"  # JetbrainsMonoNL Nerd Font, Consolas, FiraCode Nerd Font Mono
 
 # COLORS
 [colors.primary]
@@ -35,7 +35,7 @@ cursor = "#ffffff"
 blink_interval = 500
 
 [cursor.style]
-shape = "Underline" # Underline, Block or Beam 
+shape = "Block" # Underline, Block or Beam 
 blinking = "On"
 
 # SCROLLBACK
